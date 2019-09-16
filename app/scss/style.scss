@@ -1,18 +1,7 @@
-html {
-  box-sizing: border-box;
-}
+@import 'vars';
+@import 'global';
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-body{
-  background-color: green;
-  font-size: 29px;
-  padding: 50px;
-}
-.box  {
-  display: none;
-  transition: all 3s;
-}
+
+
+
+
