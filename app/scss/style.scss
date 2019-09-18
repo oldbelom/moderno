@@ -2,6 +2,8 @@
 @import 'global';
 @import 'fonts';
 
+// start header
+
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -58,6 +60,9 @@
   }
 }
 
+// end header
+// start search
+
 .search {
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,3 +117,123 @@
     }
   }
 }
+
+// end search
+// start products
+
+.products{
+  padding: 110px 0px;
+  background-color: $grey;
+}
+.products__inner-btn{
+  text-align: center;
+  margin-bottom: 60px;
+  button{
+    padding: 12px 21px;
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    cursor: pointer;
+    & + button{
+      margin-left: 5px;
+    }
+    &.mixitup-control-active{
+      background-color: $red;
+      color: #fff;
+      outline: none;
+    }
+  }
+}
+
+.products__inner-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product__item {
+  max-width: 442px;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+  margin-bottom: 30px;
+  &-img{
+    min-height: 250px;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center center;
+    background-size: cover;
+  }
+  &-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 90px;
+    align-items: center;
+    font-weight: 500;
+    background-color: #fff;
+    border-bottom: 1px solid #e7ecf2;
+  }
+  &-name{
+    max-width: 310px;
+  }
+  &-title{
+    font-size: 18px;
+    color: $bg;
+    display: block;
+  }
+  &-category{
+    display: block;
+    color: $green;
+    font-size: 14px;
+  }
+  &-price{
+    font-size: 20px;
+    color: $bg;
+    font-weight: 700;
+  }
+  &-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+  &-author{
+    display: flex;
+    align-items: center;
+    .avatar{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      margin-right: 14px;
+    }
+    span{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+.products__bottom-btn{
+  text-align: center;
+  button{
+    margin: 45px 5px 0px;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    padding: 20px 30px;
+    cursor: pointer;
+    &.mixitup-control-active{
+      background-color: $red;
+      color: #fff;
+      outline: none;
+    }
+  }
+}
+// end products
+
