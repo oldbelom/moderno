@@ -387,3 +387,188 @@
 }
 
 // end author
+
+// start tutorial
+
+.tutorial{
+  padding: 70px 0px 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+  }
+}
+.tutorial__item{
+  &-images{
+    min-height: 270px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+  }
+  &-title{
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    @include f700;
+    padding: 30px 10px;
+    color: $bg;
+
+  }
+}
+// end tutorial
+// start footer
+.footer{
+  background-color: $bg;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0px 80px;
+  }
+}
+.footer__col{
+  max-width: 270px;
+  width: 100%;
+  &-menu{
+    max-width: 220px;
+  }
+  &-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-bottom: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      width: 51px;
+      height: 3px;
+      background-color: $green;
+    }
+  }
+  &-text{
+    color: #b7c3c8;
+    margin-bottom: 30px;
+  }
+  &-info{
+    margin-top: 18px;
+    @include f500;
+    color: #fff;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '\f041';
+      font-family: 'icomoon';
+      color: $green;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+.footer__info-phone{
+  &::before{
+    content: '\f095';
+  }
+}
+.footer__copy{
+  border-top: 1px solid #424d53; 
+  &-text{
+    text-align: center;
+    font-size: 15px;
+    color: #919699;
+    padding: 25px 0px;
+  }
+}
+.footer__col-list{
+  a{
+    margin-bottom: 15px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+    &::before{
+      content: '\f105';
+      font-family: 'icomoon';
+      color: $green;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+.footer__social-link{
+  margin-bottom: 33px;
+  li{
+    display: inline-block;
+    & + li{
+      margin-left: 7px;
+    }
+  }
+    a{
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/css_sprites.png);
+  }
+}
+.link-twitter{
+  background-position: -0 -28px;
+}
+.link-youtube{
+  background-position: -28px -28px;
+
+}
+.link-pinterest{
+  background-position: -56px -0;
+}
+.link-linkedin{
+  background-position: -28px -0;
+}
+
+.footer__form-title{
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+.footer__form {
+  position: relative;
+  input{
+    background-color: #2f3c43;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 50px;
+    &::placeholder{
+      color: #697378;
+    }
+  }
+  button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $green;
+    border: none;
+    height: 40px;
+    width: 43px;
+    cursor: pointer;
+    &::before{
+      content: '\f124';
+      font-family: 'icomoon';
+      color: #fff;
+      font-size: 20px;
+      position: absolute;
+      left: 13px;
+      top: 9px;
+    }
+  }
+}
+// end footer
