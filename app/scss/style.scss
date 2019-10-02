@@ -2197,4 +2197,202 @@ button.icon-unsorted {
 
 // end settings
 
+// start profile
+.profile__inner {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+.profile__aside {
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+  & .aside__item{
+    margin-bottom: 24px;
+  }
+}
+
+.profile__content {
+  width: 100%;
+}
+
+.profile-status {
+  border: 1px solid #cccccc;
+  color: #70838d;
+  font-size: 13px;
+  padding: 2px 9px 0 27px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+  }
+}
+
+.profile-on {
+  &::before {
+    background-color: $green;
+  }
+}
+
+.profile-off {
+  &::before {
+    background-color: $red;
+  }
+
+}
+
+.profile__aside-btn {
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.profile__aside-message {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  @include f500;
+  background-color: $text;
+  padding: 18px 10px 18px 30px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+
+  &::before {
+    content: '\f003';
+    font-family: 'icomoon';
+    position: absolute;
+    left: 67px;
+    top: 16px;
+  }
+}
+
+.profile__aside-following {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  @include f700;
+  background-color: $green;
+  padding: 18px 10px;
+  box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+}
+.profile__banner{
+  border: 1px solid #d7d7d7;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 35px;
+}
+.profile__banner-img{
+  background-image: url(../images/content/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 332px;
+}
+.profile__items{
+  display: flex;
+  border: 1px solid #dedede;
+}
+.profile__item{
+  width: 25%;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 5px 17px;
+  &+.profile__item{
+    border-left: 1px solid #dedede;
+  }
+}
+.profile__item-title{
+  color: $bg;
+  font-size: 14px;
+  @include f500;
+}
+.profile__item-content{
+  color: #707070;
+  font-size: 14px;
+  &.profile__item-sales{
+    color: $bg;
+    @include f500;  
+  }
+}
+.profile-settings{
+  .product-one__tabs.settings__tabs{
+    .tabs span{
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 500;
+      color: #707070;
+      position: relative;
+      &.active::before{
+        color: $green;
+      }
+      &::before{
+        font-family: 'icomoon';
+        position: absolute;
+        left: 27px;
+        top: 16px;
+        color: #d0d0d0;
+        font-size: 14px;
+      }
+    }
+  } 
+}
+.personal-box{
+  background-color: #fff;
+  padding: 35px 40px 25px;
+  border: 1px solid #dedede;
+}
+.personal-box__title{
+  margin-bottom: 25px;
+  @include f700;
+  color: $bg;
+  font-size: 20px;
+}
+.personal-box__text{
+  margin-bottom: 20px;
+  p{
+    color: #707070;
+  }
+}
+.personal-box__item-head{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.personal-box__item-name{
+  @include f500;
+  font-size: 16px;
+  color: $bg;
+  font-style: italic;
+}
+.personal-box__item-number{
+  @include f700;
+  font-size: 16px;
+  color: $bg;
+}
+.personal-box__item-line{
+  height: 15px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  margin-bottom: 23px;
+  span{
+    display: block;
+    border-radius: 4px;
+    height: 15px;
+    background-color: $green;
+    background-image: url(../images/pro-bar.jpg);
+    background-repeat: repeat;
+  }
+}
+
+  
+
+// end profile
 @import 'media';
