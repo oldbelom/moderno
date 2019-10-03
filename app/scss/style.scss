@@ -2207,7 +2207,8 @@ button.icon-unsorted {
   max-width: 270px;
   width: 100%;
   margin-right: 30px;
-  & .aside__item{
+
+  & .aside__item {
     margin-bottom: 24px;
   }
 }
@@ -2284,56 +2285,67 @@ button.icon-unsorted {
   padding: 18px 10px;
   box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
 }
-.profile__banner{
+
+.profile__banner {
   border: 1px solid #d7d7d7;
   padding: 20px;
   background-color: #fff;
   margin-bottom: 35px;
 }
-.profile__banner-img{
+
+.profile__banner-img {
   background-image: url(../images/content/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   min-height: 332px;
 }
-.profile__items{
+
+.profile__items {
   display: flex;
   border: 1px solid #dedede;
 }
-.profile__item{
+
+.profile__item {
   width: 25%;
   background-color: #fff;
   text-align: center;
   padding: 20px 5px 17px;
-  &+.profile__item{
+
+  &+.profile__item {
     border-left: 1px solid #dedede;
   }
 }
-.profile__item-title{
+
+.profile__item-title {
   color: $bg;
   font-size: 14px;
   @include f500;
 }
-.profile__item-content{
+
+.profile__item-content {
   color: #707070;
   font-size: 14px;
-  &.profile__item-sales{
+
+  &.profile__item-sales {
     color: $bg;
-    @include f500;  
+    @include f500;
   }
 }
-.profile-settings{
-  .product-one__tabs.settings__tabs{
-    .tabs span{
+
+.profile-settings {
+  .product-one__tabs.settings__tabs {
+    .tabs span {
       font-family: 'Roboto', sans-serif !important;
       font-weight: 500;
       color: #707070;
       position: relative;
-      &.active::before{
+
+      &.active::before {
         color: $green;
       }
-      &::before{
+
+      &::before {
         font-family: 'icomoon';
         position: absolute;
         left: 27px;
@@ -2342,47 +2354,56 @@ button.icon-unsorted {
         font-size: 14px;
       }
     }
-  } 
+  }
 }
-.personal-box{
+
+.personal-box {
   background-color: #fff;
   padding: 35px 40px 25px;
   border: 1px solid #dedede;
 }
-.personal-box__title{
+
+.personal-box__title {
   margin-bottom: 25px;
   @include f700;
   color: $bg;
   font-size: 20px;
 }
-.personal-box__text{
+
+.personal-box__text {
   margin-bottom: 20px;
-  p{
+
+  p {
     color: #707070;
   }
 }
-.personal-box__item-head{
+
+.personal-box__item-head {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.personal-box__item-name{
+
+.personal-box__item-name {
   @include f500;
   font-size: 16px;
   color: $bg;
   font-style: italic;
 }
-.personal-box__item-number{
+
+.personal-box__item-number {
   @include f700;
   font-size: 16px;
   color: $bg;
 }
-.personal-box__item-line{
+
+.personal-box__item-line {
   height: 15px;
   background-color: #f4f4f4;
   border-radius: 4px;
   margin-bottom: 23px;
-  span{
+
+  span {
     display: block;
     border-radius: 4px;
     height: 15px;
@@ -2392,7 +2413,296 @@ button.icon-unsorted {
   }
 }
 
-  
-
 // end profile
+// start upload
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+    @include f500;
+    cursor: pointer;
+  }
+}
+
+.upload__inner-title {
+  padding: 16px 35px 18px;
+  @include f500;
+  font-size: 24px;
+  color: $bg;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 40px;
+}
+
+.upload__inner-content {
+  margin-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+
+  label {
+    min-width: 175px;
+    padding-right: 15px;
+    color: #444;
+    padding-top: 6px;
+
+    span {
+      color: $green;
+    }
+  }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+
+    &::placeholder {
+      color: #707070;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+    font-size: 15px;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+
+    &::before {
+      content: '\f0d7';
+      font-family: 'icomoon';
+    }
+  }
+
+  .jq-file {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+
+  input[type="file"] {
+    outline: none;
+  }
+
+  .jq-file__name {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+    color: #707070;
+    font-size: 12px;
+    line-height: 40px;
+    margin-left: 100px;
+  }
+
+  .jq-file__browse {
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    right: auto;
+    padding: 0 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 12px;
+    line-height: 26px;
+    color: #444;
+  }
+}
+
+// end upload
+
+// start withdrawals
+.withdrawals__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.withdrawals__col {
+  max-width: 570px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  height: 100%;
+}
+
+.withdrawals__title {
+  font-size: 24px;
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #d7d7d7;
+  color: $bg;
+  margin-bottom: 30px;
+  @include f500;
+}
+
+.withdrawals__content {
+  padding-left: 35px;
+  padding-right: 40px;
+
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 30px;
+    @include f700;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+}
+
+.withdrawals__form-line {
+  margin-bottom: 32px;
+
+  label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include f500;
+    margin-bottom: 20px;
+    color: $bg;
+
+    span {
+      color: $green;
+    }
+  }
+
+  select,
+  input {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+
+    &::placeholder {
+      color: #707070;
+    }
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+    font-size: 15px;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+
+    &::before {
+      content: '\f0d7';
+      font-family: 'icomoon';
+    }
+  }
+}
+.withdrawals__content-items{
+  padding-bottom: 35px;
+}
+.withdrawals__content-item{
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+  &:nth-child(odd){
+    background-color: #f9f9f9;
+  }
+}
+.withdrawals__content-date{
+  width: 154px;
+  padding-left: 20px;
+  @include f500;
+}
+.withdrawals__content-email{
+  width: 180px;
+  @include f500;
+}
+.withdrawals__content-price{
+  width: 70px;
+  @include f700;
+}
+.withdrawals__content-status{
+  width: 88px;
+  @include f700;
+  &.withdrawals__content-paid{
+    color: $green;
+  }
+}
+// end withdrawals
 @import 'media';
