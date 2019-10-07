@@ -3,6 +3,9 @@
 @import 'fonts';
 
 // start header
+.header {
+  background-color: #fff;
+}
 
 .header__top-inner {
   display: flex;
@@ -362,9 +365,7 @@
 .menu__btn {
   display: none;
 }
-
 // end header
-
 // start modal
 #modal {
   background-color: $green;
@@ -475,11 +476,8 @@
 .fancybox-button svg path {
   color: #fff;
 }
-
 // end modal
-
 // start search
-
 .search {
   background-repeat: no-repeat;
   background-size: cover;
@@ -551,13 +549,16 @@
     }
   }
 }
-
 // end search
 // start products
-
 .products {
   padding: 110px 0px;
   background-color: $grey;
+}
+
+.products__wrapper, .product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .products__inner-btn {
@@ -585,13 +586,18 @@
 
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
 }
-
+.products .product__item{
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
+}
 .product__item {
   max-width: 442px;
   width: 100%;
+  
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin-bottom: 30px;
 
@@ -628,6 +634,7 @@
     display: block;
     color: $green;
     font-size: 14px;
+    text-align: start;
   }
 
   &-price {
@@ -703,7 +710,6 @@
   padding: 110px 0px 120px;
 
   .slick-slide {
-    max-width: 442px;
     width: 100%;
     margin-left: 15px;
     margin-right: 15px;
@@ -1258,6 +1264,9 @@
 }
 
 .aside__product-item {
+  .product__item{
+    margin-left: 0;
+  }
   .product__item:last-child {
     border: none;
     padding-bottom: 0;
@@ -1324,9 +1333,10 @@ button.icon-unsorted {
 
 .product-page__content {
   .product__item {
-    max-width: 270px;
     opacity: 1;
     transition: all .3s;
+    flex-basis: calc(33.333% - 30px);
+    margin-left: 30px;
   }
 
   .product__item-img {
@@ -1357,9 +1367,10 @@ button.icon-unsorted {
 
 .product-page__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .pagination__list {
@@ -1435,6 +1446,7 @@ button.icon-unsorted {
 .product-page__items .product__item {
   &.list {
     max-width: 100%;
+    flex-basis: 100%;
 
     .product__item-img {
       width: 240px;
@@ -1507,7 +1519,7 @@ button.icon-unsorted {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 0;
+  padding: 18px 15px;
 }
 
 .product-one__images {
@@ -1864,7 +1876,6 @@ button.icon-unsorted {
 }
 
 // end product-one
-
 // start page-404
 .page-404 {
   background-color: #f4f6f5;
@@ -1908,7 +1919,7 @@ button.icon-unsorted {
     position: absolute;
     content: '';
     background-image: url(../images/man-404.png);
-    width: 150px;
+    width: 158px;
     height: 292px;
     margin-left: 15px;
   }
@@ -1941,7 +1952,6 @@ button.icon-unsorted {
 }
 
 // end page-404
-
 // start about
 .about__inner {
   padding: 0 50px;
@@ -2184,19 +2194,45 @@ button.icon-unsorted {
     padding: 0 15px;
   }
 
-  select {
-    border: 1px solid #d7d7d7;
-    background-color: #f9f9f9;
-    max-width: 540px;
+  .jq-selectbox {
     width: 100%;
+    max-width: 540px;
+  }
+
+  .jq-selectbox__select {
     height: 40px;
-    color: #000;
-    padding: 0 15px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+    font-size: 15px;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+
+    &::before {
+      content: '\f0d7';
+      font-family: 'icomoon';
+    }
   }
 }
 
 // end settings
-
 // start profile
 .profile__inner {
   display: flex;
@@ -2565,7 +2601,6 @@ button.icon-unsorted {
 }
 
 // end upload
-
 // start withdrawals
 .withdrawals__inner {
   display: flex;
@@ -2671,38 +2706,47 @@ button.icon-unsorted {
     }
   }
 }
-.withdrawals__content-items{
+
+.withdrawals__content-items {
   padding-bottom: 35px;
 }
-.withdrawals__content-item{
+
+.withdrawals__content-item {
   display: flex;
   height: 42px;
   align-items: center;
   font-size: 13px;
   color: #444;
-  &:nth-child(odd){
+
+  &:nth-child(odd) {
     background-color: #f9f9f9;
   }
 }
-.withdrawals__content-date{
+
+.withdrawals__content-date {
   width: 154px;
   padding-left: 20px;
   @include f500;
 }
-.withdrawals__content-email{
+
+.withdrawals__content-email {
   width: 180px;
   @include f500;
 }
-.withdrawals__content-price{
+
+.withdrawals__content-price {
   width: 70px;
   @include f700;
 }
-.withdrawals__content-status{
+
+.withdrawals__content-status {
   width: 88px;
   @include f700;
-  &.withdrawals__content-paid{
+
+  &.withdrawals__content-paid {
     color: $green;
   }
 }
+
 // end withdrawals
 @import 'media';
